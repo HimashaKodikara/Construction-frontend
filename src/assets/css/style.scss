@@ -1,6 +1,7 @@
 $primary-color: #fe538d;
 $secondary-color: #FFB703;
 $text-color: #000;
+$text-white: #FFFFFF;
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
@@ -20,3 +21,75 @@ h3{
 p{
     font-size: 1.2em;
 }
+.btn-primary{
+    background-color: $primary-color;
+   border: 1px solid $primary-color;
+    padding: 15px 20px;
+    font-size: 500;
+    text-transform: uppercase;
+    &:hover{
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+    }
+}
+
+.btn-secondary{
+    background-color: $secondary-color;
+   border: 1px solid $secondary-color;
+    padding: 15px 20px;
+    font-size: 500;
+    text-transform: uppercase;
+    &:hover{
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}
+header{
+    nav{
+        .nav-link{
+            text-transform: uppercase;
+            color:$text-color;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-left: 20px;
+        }
+    }
+    .logo{
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: 500;
+
+        span{
+            color: $primary-color;
+        }
+    }
+}
+.section-1{
+    .hero{
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url('../images/hero.jpg') no-repeat center center/cover;
+       
+        min-height: 800px;
+        color: $text-white;
+
+        span{
+            color: $secondary-color;
+            font-size: 1.5em;
+            font-weight: 500;
+        }
+    }
+}
+
+.section-2{
+    img{
+        border-radius: 40px;
+    }
+    span{
+      color: $primary-color;
+        font-size: 1.2em;  
+        padding-bottom: 10px;
+        text-transform:uppercase;
+        font-weight: 500;
+    }
+}
+
+
