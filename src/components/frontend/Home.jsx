@@ -13,7 +13,7 @@ const Home = () => {
                         <Nav className="ms-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
                             <Nav.Link href="#link">About Us</Nav.Link>
-                            <Nav.Link href="#link">Services</Nav.Link>
+                            <Nav.Link href="#link">Sces</Nav.Link>
                             <Nav.Link href="#link">Project</Nav.Link>
                             <Nav.Link href="#link">Blogs</Nav.Link>
                             <Nav.Link href="#link">Contact Us</Nav.Link>
