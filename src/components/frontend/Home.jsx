@@ -16,7 +16,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import AvatarImg from '../../assets/images/author-2.jpg';
 import { A11y, Pagination, Scrollbar } from 'swiper/modules';
-
+import About from '../../components/frontend/common/About'
 import { Swiper, SwiperSlide } from 'swiper/react';
 //import 'swipper/css';
 
@@ -45,23 +45,7 @@ const Home = () => {
                 </section>
 
                 {/*About us section*/}
-                <section className='section-2 py-5'>
-                    <div className='container'>
-                        <div className='row'>
-                            <div className='col-md-6'>
-                                <img src={AboutImg} alt="About Us" className='w-100' />
-                            </div>
-                            <div className='col-md-6'>
-                                <span className=''>about us</span>
-                                <h2>Crafting structures that last a lifetime</h2>
-                                <p>Building enduring structures requires a comprehensive approach that combines advanced materials, resilient design, routine maintenance, and sustainable practices. By drawing on historical insights and utilizing modern technology.
-
-                                </p>
-                                <p> Designing structures that stand the test of time involves a seamless blend of cutting-edge materials, durable design, ongoing upkeep, and eco-friendly practices. By combining lessons from the past with the power of modern technology.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <About />
                 {/*Our Services*/}
                 <section className='section-3 bg-light py-5'>
                     <div className='container-fluid py-5'>
@@ -299,11 +283,11 @@ const Home = () => {
                         </div>
                         <Swiper
 
-                        modules={[Pagination]}
+                            modules={[Pagination]}
                             spaceBetween={50}
                             slidesPerView={3}
-                            pagination={{clickable: true}}
-                           >
+                            pagination={{ clickable: true }}
+                        >
                             <SwiperSlide>
                                 <div className='card shadow border-0'>
                                     <div className='card-body p-5'>
@@ -328,7 +312,7 @@ const Home = () => {
                                             <p>We recently partnered with SAASA for our construction project, and the experience was outstanding. Their team demonstrated exceptional professionalism, attention to detail, and commitment to quality. From planning to execution.
                                             </p>
                                         </div>
-                                        <hr/>
+                                        <hr />
                                         <div className='d-flex meta'>
                                             <div>
                                                 <img src={AvatarImg} alt="Avatar" width={50} className='avatar' />
@@ -366,7 +350,7 @@ const Home = () => {
                                             <p>We recently partnered with SAASA for our construction project, and the experience was outstanding. Their team demonstrated exceptional professionalism, attention to detail, and commitment to quality. From planning to execution.
                                             </p>
                                         </div>
-                                        <hr/>
+                                        <hr />
                                         <div className='d-flex meta'>
                                             <div>
                                                 <img src={AvatarImg} alt="Avatar" width={50} className='avatar' />
@@ -404,7 +388,7 @@ const Home = () => {
                                             <p>We recently partnered with SAASA for our construction project, and the experience was outstanding. Their team demonstrated exceptional professionalism, attention to detail, and commitment to quality. From planning to execution.
                                             </p>
                                         </div>
-                                        <hr/>
+                                        <hr />
                                         <div className='d-flex meta'>
                                             <div>
                                                 <img src={AvatarImg} alt="Avatar" width={50} className='avatar' />
@@ -442,7 +426,7 @@ const Home = () => {
                                             <p>We recently partnered with SAASA for our construction project, and the experience was outstanding. Their team demonstrated exceptional professionalism, attention to detail, and commitment to quality. From planning to execution.
                                             </p>
                                         </div>
-                                        <hr/>
+                                        <hr />
                                         <div className='d-flex meta'>
                                             <div>
                                                 <img src={AvatarImg} alt="Avatar" width={50} className='avatar' />
@@ -480,7 +464,7 @@ const Home = () => {
                                             <p>We recently partnered with SAASA for our construction project, and the experience was outstanding. Their team demonstrated exceptional professionalism, attention to detail, and commitment to quality. From planning to execution.
                                             </p>
                                         </div>
-                                        <hr/>
+                                        <hr />
                                         <div className='d-flex meta'>
                                             <div>
                                                 <img src={AvatarImg} alt="Avatar" width={50} className='avatar' />
@@ -518,7 +502,7 @@ const Home = () => {
                                             <p>We recently partnered with SAASA for our construction project, and the experience was outstanding. Their team demonstrated exceptional professionalism, attention to detail, and commitment to quality. From planning to execution.
                                             </p>
                                         </div>
-                                        <hr/>
+                                        <hr />
                                         <div className='d-flex meta'>
                                             <div>
                                                 <img src={AvatarImg} alt="Avatar" width={50} className='avatar' />
@@ -540,57 +524,57 @@ const Home = () => {
                 </section>
                 <section className='section-6 bg-light py-5'>
                     <div className='container'>
-                    <div className='section-header text-center '>
+                        <div className='section-header text-center '>
                             <span>Blog & News</span>
                             <h2>Articles & blog posts</h2>
                             <p>We offer a diverse array of construction services, spanning residential, commercial, and industrial projects.</p>
                         </div>
                         <div className='row '>
-                       <div className='col-md-3'>
-                          <div className='card shadow border-0'>
-                            <div className='card-img-top'>
-                                <img src={BlogImg1} alt="Blog" className='w-100' />
-                            </div>
-                            <div className='card-body p-4'>
-                                <div className='mb-3'>
-                                    <a href='#' className='title'>Dummy blog title</a> 
+                            <div className='col-md-3'>
+                                <div className='card shadow border-0'>
+                                    <div className='card-img-top'>
+                                        <img src={BlogImg1} alt="Blog" className='w-100' />
+                                    </div>
+                                    <div className='card-body p-4'>
+                                        <div className='mb-3'>
+                                            <a href='#' className='title'>Dummy blog title</a>
+                                        </div>
+                                        <a href='#' className='btn btn-primary small'>Read More</a>
+                                    </div>
                                 </div>
-                                <a href='#' className='btn btn-primary small'>Read More</a>
                             </div>
-                          </div>
-                       </div>
-                       <div className='col-md-3'>
-                          <div className='card shadow border-0'>
-                            <div className='card-img-top'>
-                                <img src={BlogImg1} alt="Blog" className='w-100' />
-                            </div>
-                            <div className='card-body p-4'>
-                                <div className='mb-3'>
-                                    <a href='#' className='title'>Dummy blog title</a> 
+                            <div className='col-md-3'>
+                                <div className='card shadow border-0'>
+                                    <div className='card-img-top'>
+                                        <img src={BlogImg1} alt="Blog" className='w-100' />
+                                    </div>
+                                    <div className='card-body p-4'>
+                                        <div className='mb-3'>
+                                            <a href='#' className='title'>Dummy blog title</a>
+                                        </div>
+                                        <a href='#' className='btn btn-primary small'>Read More</a>
+                                    </div>
                                 </div>
-                                <a href='#' className='btn btn-primary small'>Read More</a>
                             </div>
-                          </div>
-                       </div>
-                       <div className='col-md-3'>
-                          <div className='card shadow border-0'>
-                            <div className='card-img-top'>
-                                <img src={BlogImg1} alt="Blog" className='w-100' />
-                            </div>
-                            <div className='card-body p-4'>
-                                <div className='mb-3'>
-                                    <a href='#' className='title'>Dummy blog title</a> 
+                            <div className='col-md-3'>
+                                <div className='card shadow border-0'>
+                                    <div className='card-img-top'>
+                                        <img src={BlogImg1} alt="Blog" className='w-100' />
+                                    </div>
+                                    <div className='card-body p-4'>
+                                        <div className='mb-3'>
+                                            <a href='#' className='title'>Dummy blog title</a>
+                                        </div>
+                                        <a href='#' className='btn btn-primary small'>Read More</a>
+                                    </div>
                                 </div>
-                                <a href='#' className='btn btn-primary small'>Read More</a>
                             </div>
-                          </div>
-                       </div>
-                    </div>
+                        </div>
 
                     </div>
-                    
-                 
-                   
+
+
+
                 </section>
             </main>
             <Footer />
