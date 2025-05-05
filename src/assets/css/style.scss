@@ -312,3 +312,29 @@ footer{
     }
   }
 }
+.login-form {
+    width: 500px; // or whatever width you prefer
+    .card {
+      width: 100%;
+    }
+  }
+  
+  .dashboard{
+    .card{
+        min-height: 400px;
+    }
+  }
+
+  .sidebar{
+    ul{
+        li{
+            a{
+                text-decoration: none;
+                display:block;
+                padding: 10px 0;
+                border-bottom:1px solid rgba(0, 0, 0, 0.20);
+            
+        }
+    }
+  }
+  }
