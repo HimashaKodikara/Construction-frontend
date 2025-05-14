@@ -13,7 +13,9 @@ import './assets/css/style.scss';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RequireAuth from './components/frontend/common/RequireAuth';
-
+import Show from './components/backend/services/Show';
+import CreateService from './components/backend/services/Create';
+import {default as EditService} from './components/backend/services/Edit';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -33,7 +35,25 @@ function App() {
             </RequireAuth>
           }
           />
-
+           <Route path='/admin/services' element={
+            <RequireAuth >
+              <Show />
+            </RequireAuth>
+          }
+          />
+          
+          <Route path='/admin/services/create' element={
+            <RequireAuth >
+              <CreateService />
+            </RequireAuth>
+          }
+          />
+    <Route path='/admin/services/edit/:id' element={
+            <RequireAuth >
+              <EditService />
+            </RequireAuth>
+          }
+          />
 
         </Routes>
       </BrowserRouter>
