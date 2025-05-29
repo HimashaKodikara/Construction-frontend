@@ -62,8 +62,8 @@ const Edit = ({ placeholder }) => {
 
     const onSubmit = async (data) => {
         const newData = { ...data, "content": content, "imageId": imageId }
-        const res = await fetch(apiurl + 'projects', {
-            method: 'POST',
+        const res = await fetch(apiurl + 'projects/'+ params.id, {
+            method: 'PUT',
             headers: {
                 'Content-type': 'application/json',
                 'Accept': 'application/json',
@@ -299,7 +299,7 @@ const Edit = ({ placeholder }) => {
 
                                             </select>
                                         </div>
-                                        <button disabled={isDisable} className='btn btn-primary'>Submit</button>
+                                        <button disabled={isDisable} className='btn btn-primary'>Update</button>
                                     </form>
 
                                 </div>

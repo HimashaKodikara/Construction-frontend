@@ -4,7 +4,10 @@ import Header from '../../frontend/common/Header'
 import Slidebar from '../../frontend/common/Slidebar'
 import { Link } from 'react-router-dom'
 import { apiurl, token } from '../../frontend/common/http'
+import { toast } from 'react-toastify'
+
 const Show = () => {
+
     const [projects, setProjects] = useState([]);
   
     //http://localhost:8000/api/projects
@@ -22,8 +25,23 @@ const Show = () => {
       setProjects(result.data); // Optional: set to state if needed
     }
   
-    const deleteProject = (id) =>{
-
+    const deleteProject = async(id) =>{
+     if(confirm("Are you sure you want to delete?")){
+        const res = await fetch(apiurl + 'projects/'+id, {
+        method: 'DELETE',
+        headers: {
+          'Content-type': 'application/json',
+          'Accept': 'application/json',
+          'Authorization': `Bearer ${token()}`
+        }
+      });
+      const result = await res.json();
+      if(result.status == true){
+        toast.success(result.message);
+        const newProjects = projects.filter(project => project.id != id)
+        setProjects(newProjects)
+      }
+     }
     }
 
     useEffect(()=>{
