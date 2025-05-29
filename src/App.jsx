@@ -17,7 +17,11 @@ import Show from './components/backend/services/Show';
 import CreateService from './components/backend/services/Create';
 import { default as EditService } from './components/backend/services/Edit';
 
-import {default as ShowProjects} from './components/backend/projects/Show';
+import { default as ShowProjects } from './components/backend/projects/Show';
+import { default as CreateProject } from './components/backend/projects/Create';
+import { default as EditProject } from './components/backend/projects/Edit';
+
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -64,6 +68,19 @@ function App() {
           }
           />
 
+          <Route path='/admin/projects/create' element={
+            <RequireAuth >
+              <CreateProject />
+            </RequireAuth>
+          }
+          />
+
+          <Route path='/admin/projects/edit/:id' element={
+            <RequireAuth >
+              <EditProject />
+            </RequireAuth>
+          }
+          />
         </Routes>
       </BrowserRouter>
       <ToastContainer

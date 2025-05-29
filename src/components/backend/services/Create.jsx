@@ -7,6 +7,8 @@ import { apiurl, token } from '../../frontend/common/http'
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import JoditEditor from 'jodit-react'
+
+
 const Create = ({ placeholder }) => {
     const editor = useRef(null);
     const [content, setContent] = useState('');
@@ -30,7 +32,7 @@ const Create = ({ placeholder }) => {
     const navigate = useNavigate();
 
     const onSubmit = async (data) => {
-        const newData = { ...data, "content": content, "imageId" : imageId }
+        const newData = { ...data, "content": content, "imageId": imageId }
         const res = await fetch(apiurl + 'services', {
             method: 'POST',
             headers: {
@@ -54,7 +56,7 @@ const Create = ({ placeholder }) => {
         const formData = new FormData();
         const file = e.target.files[0];
         formData.append("image", file);
-
+        setIsDisable(true);
         try {
             const response = await fetch(apiurl + 'temp-images', {
                 method: 'POST',
@@ -66,7 +68,7 @@ const Create = ({ placeholder }) => {
             });
 
             const result = await response.json();
-
+            setIsDisable(false);
             if (result.status === false) {
                 const errorMessage = result.errors?.image?.[0] || 'Image upload failed';
                 toast.error(errorMessage);

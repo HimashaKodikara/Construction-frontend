@@ -45,7 +45,7 @@ const Show = () => {
                 <div className='card-body p-4'>
                   <div className='d-flex justify-content-between'>
                     <h4 className='h5'>Projects</h4>
-                    <Link to='/admin/services/create' className='btn btn-primary'>Create</Link>
+                    <Link to='/admin/projects/create' className='btn btn-primary'>Create</Link>
                   </div>
                   <hr />
 
@@ -74,7 +74,7 @@ const Show = () => {
                               }
                               </td>
                               <td>
-                                <Link to={`/admin/services/edit/${project.id}`} className='btn btn-primary btn-sm'>Edit</Link>
+                                <Link to={`/admin/projects/edit/${project.id}`} className='btn btn-primary btn-sm'>Edit</Link>
                                 <Link onClick={() => deleteProject(project.id)} href='#' className='btn btn-secondary btn-sm ms-2'>Delete</Link>
                               </td>
 

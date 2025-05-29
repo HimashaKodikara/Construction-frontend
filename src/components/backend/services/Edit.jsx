@@ -54,49 +54,49 @@ const Edit = ({ placeholder }) => {
 
     const navigate = useNavigate();
 
-   
+
     const onSubmit = async (data) => {
-    const newData = {
-        ...data,
-        "content": content,
-        "imageId": imageId
-    };
+        const newData = {
+            ...data,
+            "content": content,
+            "imageId": imageId
+        };
 
-    const res = await fetch(apiurl + 'services/' + params.id, {
-        method: 'PUT',
-        headers: {
-            'Content-type': 'application/json',
-            'Accept': 'application/json',
-            'Authorization': `Bearer ${token()}`
-        },
-        body: JSON.stringify(newData)
-    });
+        const res = await fetch(apiurl + 'services/' + params.id, {
+            method: 'PUT',
+            headers: {
+                'Content-type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${token()}`
+            },
+            body: JSON.stringify(newData)
+        });
 
-    const result = await res.json();
+        const result = await res.json();
 
-    if (result.status === true) {
-        toast.success(result.message);
-        navigate('/admin/services');
-    } else {
-        if (result.errors) {
-            // Manually set errors for react-hook-form
-            if (result.errors.slug) {
-                toast.error(result.errors.slug[0]);
+        if (result.status === true) {
+            toast.success(result.message);
+            navigate('/admin/services');
+        } else {
+            if (result.errors) {
+                // Manually set errors for react-hook-form
+                if (result.errors.slug) {
+                    toast.error(result.errors.slug[0]);
+                } else {
+                    toast.error(result.message || 'Something went wrong');
+                }
             } else {
                 toast.error(result.message || 'Something went wrong');
             }
-        } else {
-            toast.error(result.message || 'Something went wrong');
         }
-    }
-};
+    };
 
 
     const handleFile = async (e) => {
         const formData = new FormData();
         const file = e.target.files[0];
         formData.append("image", file);
-
+        setIsDisable(true);
         try {
             const response = await fetch(apiurl + 'temp-images', {
                 method: 'POST',
@@ -108,7 +108,7 @@ const Edit = ({ placeholder }) => {
             });
 
             const result = await response.json();
-
+            setIsDisable(false);
             if (result.status === false) {
                 const errorMessage = result.errors?.image?.[0] || 'Image upload failed';
                 toast.error(errorMessage);
