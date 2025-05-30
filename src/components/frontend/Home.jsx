@@ -24,7 +24,7 @@ import LatestAticles from './common/LatestArticles';
 
 const Home = () => {
 
-   
+
 
     return (
         <>
@@ -52,8 +52,9 @@ const Home = () => {
                 {/*About us section*/}
                 <About />
                 {/*Our Services*/}
-                <LatestServices/>
-                
+                <div class='container bg-body rounded-3'>
+                <LatestServices />
+</div>
                 {/*Why Choose Us*/}
 
                 <section className='section-4 py-5'>
@@ -108,9 +109,9 @@ const Home = () => {
                     </div>
                 </section>
                 {/*Our Projects*/}
-
-              <LatestProjects/>
-
+                <div class='container bg-body'>
+                    <LatestProjects />
+                </div>
                 <section className='section-5 py-5'>
                     <div className='container'>
                         <div className='section-header text-center '>
@@ -359,7 +360,8 @@ const Home = () => {
                         </Swiper>
                     </div>
                 </section>
-               <LatestAticles/>
+                <div class='container bg-body'> <LatestAticles /></div>
+
             </main>
             <Footer />
         </>

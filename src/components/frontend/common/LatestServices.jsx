@@ -29,7 +29,7 @@ const LatestServices = () => {
                     {
                         services && services.map(service => {
                             return(
-                                <div className='col-md-3 col-lg-3'>
+                                <div key={`service-${service.id}`} className='col-md-4 col-lg-4'>
                                     <div className='item'>
                                         <div className='service-image'>
                                             <img src={`${fileUrl}uploads/services/small/${service.image}`} alt="Service" className='w-100' />

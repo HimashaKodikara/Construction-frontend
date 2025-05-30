@@ -36,10 +36,10 @@ const LatestProject = () => {
                 </div>
                 <div className='row pt-4'>
 
-                        {
-                            projects && projects.map(project => {
-                                return (
-                                                        <div className='col-md-3 col-lg-3'>
+                    {
+                        projects && projects.map(project => {
+                            return (
+                                <div key={`project-${project.id}`} className='col-md-4 col-lg-4'>
                                     <div className='item'>
                                         <div className='service-image'>
                                             <img src={`${fileUrl}uploads/projects/small/${project.image}`} alt="Service" className='w-100' />
@@ -55,11 +55,11 @@ const LatestProject = () => {
                                             <a href='#' className='btn btn-primary small'>Read More</a>
                                         </div>
                                     </div>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
 
             </div>
 
