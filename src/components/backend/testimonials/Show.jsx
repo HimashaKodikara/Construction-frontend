@@ -25,9 +25,10 @@ const Show = () => {
       }
     
     
-      const deleteService = async (id) => {
+      const deleteTestimonial = async (id) => {
+
         if (confirm("Are you sure you want to delete")) {
-          const res = await fetch(apiurl + 'services/' + id, {
+          const res = await fetch(apiurl + 'testimonials/' + id, {
             method: 'DELETE',
             headers: {
               'Content-type': 'application/json',
@@ -38,11 +39,11 @@ const Show = () => {
           const result = await res.json();
     
           if(result.status == true){
-            const newServices = services.filter(service => service.id != id)
-            setTestimonials(newServices);
+            const newTestimonial = testimonials.filter(testimonials => testimonials.id != id)
+            setTestimonials(newTestimonial);
             toast.success(result.message)
           }else{
-            toast.success(result.message)
+            toast.error(result.message)
           }
         }
     
@@ -101,7 +102,7 @@ const Show = () => {
                               </td>
                               <td>
                                 <Link to={`/admin/testimonials/edit/${testimonial.id}`} className='btn btn-primary btn-sm'>Edit</Link>
-                                <Link onClick={() => deleteService(testimonial.id)} href='#' className='btn btn-secondary btn-sm ms-2'>Delete</Link>
+                                <Link onClick={() => deleteTestimonial(testimonial.id)} href='#' className='btn btn-secondary btn-sm ms-2'>Delete</Link>
                               </td>
 
                             </tr>
