@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Header from './common/Header';
 import Footer from './common/Footer';
 import ServiceImg from '../../assets/images/construction1.jpg';

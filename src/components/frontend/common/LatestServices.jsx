@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import ServiceImg from '../../../assets/images/construction1.jpg';
 import { apiurl, fileUrl, token } from '../../frontend/common/http';
-
+import {Link}  from 'react-router-dom';
+ 
 const LatestServices = () => {
     const [services, setService] = useState([]);
     const fetchLatestServices = async () => {
@@ -43,7 +44,7 @@ const LatestServices = () => {
 
                                                    {service.short_desc}</p>
                                             </div>
-                                            <a href='#' className='btn btn-primary'>Read More</a>
+                                            <Link to={`/service/${service.id}`} className='btn btn-primary'>Read More</Link>
                                         </div>
                                     </div>
                                 </div>

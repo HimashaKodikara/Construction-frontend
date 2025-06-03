@@ -30,6 +30,7 @@ import {default as EditTestmonials} from './components/backend/testimonials/Edit
 import {default as ShowMembers} from './components/backend/members/Show';
 import {default as CreateMembers} from './components/backend/members/Create';
 import {default as EditMembers} from './components/backend/members/Edit';
+import ServiceDetails from './components/frontend/ServiceDetails';
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           <Route path="/service" element={<Service />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/admin/login' element={<Login />} />
+          <Route path='/service/:id' element={<ServiceDetails />} />
 
           <Route path='/admin/dashboard' element={
             <RequireAuth >
@@ -160,6 +162,8 @@ function App() {
             </RequireAuth>
           }
           />
+
+          
 
         </Routes>
       </BrowserRouter>
