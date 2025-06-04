@@ -3,6 +3,7 @@ import Header from './common/Header';
 import Footer from './common/Footer';
 import ServiceImg from '../../assets/images/construction1.jpg';
 import { apiurl ,fileUrl} from './common/http';
+import { Link,useParams} from 'react-router-dom';
 
 const service = () => {
     const [services, setService] = useState([]);
@@ -64,7 +65,7 @@ const service = () => {
 
                                                         {service.short_desc}</p>
                                                 </div>
-                                                <a href='#' className='btn btn-primary'>Read More</a>
+                                            <Link to={`/service/${service.id}`} className='btn btn-primary'>Read More</Link>
                                             </div>
                                         </div>
                                     </div>
