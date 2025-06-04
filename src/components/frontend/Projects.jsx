@@ -7,6 +7,7 @@ import ConstructionImg2 from '../../assets/images/construction3.jpg';
 import ConstructionImg3 from '../../assets/images/construction4.jpg';
 import ConstructionImg4 from '../../assets/images/construction5.jpg';
 import { apiurl, fileUrl } from './common/http';
+import {Link}  from 'react-router-dom';
 
 const Projects = () => {
 
@@ -74,7 +75,7 @@ const Projects = () => {
                                                         <p>
                                                             {project.short_desc} </p>
                                                     </div>
-                                                    <a href='#' className='btn btn-primary small'>Read More</a>
+                                                    <Link to={`/project/${project.id}`} className='btn btn-primary small'>Read More</Link>
                                                 </div>
                                             </div>
                                         </div>

@@ -3,13 +3,14 @@ import Header from './common/Header';
 import Footer from './common/Footer';
 import { apiurl, fileUrl } from './common/http';
 import { Link, useParams } from 'react-router-dom';
+import ShowTestimonial from './common/ShowTestimonial';
 
 const ServiceDetails = () => {
 
     const params = useParams();
     const [service, setService] = useState([]);
     const [services, setServices] = useState([]);
-    
+
     const fetchServices = async () => {
         const res = await fetch(`${apiurl}get-services`, {
             method: 'GET'
@@ -57,7 +58,7 @@ const ServiceDetails = () => {
                 <section className='section-10'>
 
                     <div className='container py-5'>
-                        
+
                         <div className='row'>
                             <div className='col-md-3'>
                                 <div className='card shadow border-0 sidebar'>
@@ -66,31 +67,33 @@ const ServiceDetails = () => {
                                         <ul>
                                             {
                                                 services && services.map(service => {
-                                                 return(
-                                                    <li className='service-link' key={`service-${service.id}`} >
-                                                        <Link to={`/service/${service.id}`} className='service-link'>{service.title}</Link>
-                                                    </li>
-                                                 )
+                                                    return (
+                                                        <li className='service-link' key={`service-${service.id}`} >
+                                                            <Link to={`/service/${service.id}`} className='service-link'>{service.title}</Link>
+                                                        </li>
+                                                    )
                                                 })
                                             }
-                                           
+
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div className='col-md-9'>
-                                 <div>
+                                <div>
                                     <img className='w-50' src={`${fileUrl}uploads/services/large/${service.image}`} />
-                                 </div>
-                                 <h3 className='py-3'>{service.title}</h3>
-                                 <div dangerouslySetInnerHTML={{ __html: service.content}}>
-                                  
-                                 </div>
+                                </div>
+                                <h3 className='py-3'>{service.title}</h3>
+                                <div dangerouslySetInnerHTML={{ __html: service.content }}>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-
+                <section className='section-11 bg-light py-5'>
+                    <ShowTestimonial />
+                </section>
             </main>
 
             <Footer />
