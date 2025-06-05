@@ -32,7 +32,8 @@ import {default as CreateMembers} from './components/backend/members/Create';
 import {default as EditMembers} from './components/backend/members/Edit';
 import ServiceDetails from './components/frontend/ServiceDetails';
 import ProjectDetails from './components/frontend/ProjectDetail';
-
+import BlogDetail from './components/frontend/BlogDetail';
+import ContactUs from './components/frontend/ContactUs';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -44,9 +45,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/service" element={<Service />} />
           <Route path='/projects' element={<Projects />} />
+          <Route path='/contactus' element={<ContactUs/>}/>
           <Route path='/admin/login' element={<Login />} />
           <Route path='/service/:id' element={<ServiceDetails />} />
           <Route path='/project/:id' element={<ProjectDetails />} />
+          <Route path='/blog/:id' element={<BlogDetail />} />
 
 
           <Route path='/admin/dashboard' element={

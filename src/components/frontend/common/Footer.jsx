@@ -51,15 +51,13 @@ const Footer = () => {
                         <h3 className='mb-3'>Contact Us</h3>
                         <ul>
                             <li>
-                                <a href=''>+94 078 048 0147</a>
+                                <a href=''>+94 076 048 0147</a>
                             </li>
                             <li>
                                 <a href=''>info@example.com</a>
                             </li>
                             <li>
-                                <a href=''>B-18X, Rajaji Puram
-                                    Lucknow, Uttar Pradesh, 226017
-                                    0522400XXXX
+                                <a href=''>76 Nimala Mariya Mawatha, Wattala
 
                                 </a>
                             </li>

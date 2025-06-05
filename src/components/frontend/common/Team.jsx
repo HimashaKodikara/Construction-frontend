@@ -36,7 +36,7 @@ const Team = () => {
                                     <div className="card shadow border-0">
 
                                         <div className="card-body p-4">
-                                            <div className='service-image'>
+                                            <div className=''>
                                                 <img src={`${fileUrl}uploads/members/${member.image}`} alt="Members" className='w-100' />
                                             </div>
                                             <div className="card-title pb-0 pt-0">

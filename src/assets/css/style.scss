@@ -353,3 +353,21 @@ footer{
   .service-link :hover{
     color:#fe538d
   }
+
+  .article-title{
+    color: #000000;
+    text-decoration: none;
+
+  }
+  .article-title:hover{
+    color: #fe538d;
+  }
+
+  .section-11{
+    .slidebar{
+        border-radius: 40px;
+        .title{
+            font-size:1.2em;
+        }
+    }
+  }

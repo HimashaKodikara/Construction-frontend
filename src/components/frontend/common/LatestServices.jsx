@@ -20,7 +20,7 @@ const LatestServices = () => {
 
     return (
         <section className='section-3 bg-light py-5'>
-            <div className='container-fluid py-5'>
+            <div className=' py-5'>
                 <div className='section-header text-center '>
                     <span>our services</span>
                     <h2>Our construction services</h2>
@@ -30,7 +30,7 @@ const LatestServices = () => {
                     {
                         services && services.map(service => {
                             return(
-                                <div key={`service-${service.id}`} className='col-md-4 col-lg-4'>
+                                <div key={`service-${service.id}`} className='col-md-3 col-lg-3'>
                                     <div className='item'>
                                         <div className='service-image'>
                                             <img src={`${fileUrl}uploads/services/small/${service.image}`} alt="Service" className='w-100' />
