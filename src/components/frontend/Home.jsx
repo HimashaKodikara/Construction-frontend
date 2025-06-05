@@ -39,8 +39,8 @@ const Home = () => {
                                 </p>
 
                                 <div className='mt-4'>
-                                    <a className='btn btn-primary large'>Contact Now</a>
-                                    <a className='btn btn-secondary ms-2 large'>View Project</a></div>
+                                    <a href='/contactus' className='btn btn-primary large'>Contact Now</a>
+                                    <a href='/projects' className='btn btn-secondary ms-2 large' >View Project</a></div>
                             </div>
                         </div>
                     </div>
