@@ -44,7 +44,7 @@ const ContactUs = () => {
                     <div className='container-fluid'>
                         <div className='text-left' style={{ marginLeft: '100px' }}>
                             <span>Quality. Integrity. Value.</span>
-                            <h1>Contact Us</h1>
+                            <h1>Contact Us </h1>
                             <p>
                                 We excel at transforming visions into reality<br />
                                 through outstanding craftsmanship and precise.
